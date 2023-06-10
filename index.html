@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Kanban Board</title>
+	<link rel="stylesheet" href="css/main.css">
+	<style>
+		.header {
+			text-align: center;
+			margin: 10px 0;
+		}
+
+		.header h1 {
+			font-size: 48px;
+			color: transparent;
+			text-transform: capitalize;
+			position: relative;
+			display: inline-block;
+			transition: all 0.3s;
+			background: linear-gradient(to right, #434343 0%, black 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+
+		.header h1:before,
+		.header h1:after {
+			content: "";
+			position: absolute;
+			height: 2px;
+			background-color: #000000;
+			transition: all 0.3s;
+		}
+
+		.header h1:before {
+			top: -5px;
+			left: 0;
+			width: 30%;
+		}
+
+		.header h1:after {
+			top: -5px;
+			right: 0;
+			width: 30%;
+		}
+
+		.header h1:hover:before,
+		.header h1:hover:after {
+			width: 50%;
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<h1>Kanban Flow</h1>
+	</div>
+	<div class="kanban">
+		<!-- Kanban board code -->
+	</div>
+	<script src="js/main.js" type="module"></script>
+</body>
+</html>
